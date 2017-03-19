@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>stepmania</id>
+    <version>5.0.12</version>
+    <packageSourceUrl>https://github.com/scowalt/chocolatey-stepmania</packageSourceUrl>
+    <owners>scowalt</owners>
+
+    <title>StepMania</title>
+    <projectUrl>https://www.stepmania.com/</projectUrl>
+    <iconUrl>https://rawgit.com/stepmania/stepmania/master/icons/hicolor/128x128/apps/stepmania-ssc.png</iconUrl>
+    <authors>Chris Danford, the StepMania development team</authors>
+    <copyright>Chris Danford, the StepMania development team, et al.</copyright>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/stepmania/stepmania</projectSourceUrl>
+    <docsUrl>https://github.com/stepmania/stepmania/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/stepmania/stepmania/issues</bugTrackerUrl>
+    <tags>stepmania admin</tags>
+    <summary>StepMania is an advanced cross-platform rhythm game for home and arcade use.</summary>
+    <description>StepMania is a free dance and rhythm game for Windows, Mac, and Linux. It features 3D graphics, keyboard and "dance pad" support, and an editor for creating your own steps.</description>
+    <releaseNotes>2016/06/28
+----------
+* [Gameplay] Moved pause menu logic to a script in _fallback.  Added
+  documentation to help other themes implement a pause menu.
+
+2016/06/24
+----------
+* [SelectMusic] Added AllowHoldForOptions preference to disable holding start
+  to go to the player options screen. [kyzentun]
+* [General] Back button will only back out of the screen on a press, not when
+  it is still being held from the previous screen. [kyzentun]
+
+2016/06/12
+----------
+* [ScreenSyncOverlay] Moved actors to lua to make them themable. [kyzentun]
+
+2016/06/09
+----------
+* [Gameplay] Ready and Go announcer sounds no longer play simultaneously.  If
+  the Ready animation doesn't exist and the Go animation exists, only the
+  Go announcer sound is played.  If neither animation exists, only the Ready
+  announcer sound is played. [kyzentun]
+
+2016/06/07
+----------
+* [NotesWriterSM] Stops, delays, and warps that occur on the same row are now
+  summed correctly.  Fixes bug that deleted warps that were on the same row
+  as a stop. [kyzentun]
+* [Sound] Ignore invalid SoundDriver preference. [kyzentun]
+
+2016/06/06
+----------
+* [Language] Traditional Chinese translation added. [ddrtime]
+
+2016/05/25
+----------
+* [MemoryCards] Fixed bug that caused loading profiles from usb drives to
+  crash. [djpohly]
+
+2016/05/20
+----------
+* [Global] Removed UndocumentedFeature lua function because it was just a way
+  to crash with a message. [kyzentun]
+
+2016/05/11
+----------
+* [Minimaid] Fixed crash that occurred when the minimaid lights driver was
+  selected, but no minimaid device was connected. [wolfman2000]</releaseNotes>
+    <dependencies>
+      <dependency id="vcredist2015" version="14.0.24215" />
+      <dependency id="directx " version="9.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
